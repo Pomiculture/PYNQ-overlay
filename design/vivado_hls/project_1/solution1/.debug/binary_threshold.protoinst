@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"binary_threshold": {
+			"proto_instances": {
+			}
+		}
+	}
+}

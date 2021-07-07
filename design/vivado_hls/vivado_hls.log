@@ -1,0 +1,21 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'semi' on host 'semi-Precision-T1700' (Linux_x86_64 version 5.3.0-40-generic) on Sun Jul 04 18:25:30 CEST 2021
+INFO: [HLS 200-10] On os Ubuntu 18.04.3 LTS
+INFO: [HLS 200-10] In directory '/home/semi/Project/vivado_hls'
+Sourcing Tcl script '/home/semi/Project/vivado_hls/project_1/solution1/export.tcl'
+INFO: [HLS 200-10] Opening project '/home/semi/Project/vivado_hls/project_1'.
+INFO: [HLS 200-10] Opening solution '/home/semi/Project/vivado_hls/project_1/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Jul  4 18:25:42 2021...

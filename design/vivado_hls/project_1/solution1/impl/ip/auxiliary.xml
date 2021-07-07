@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="binary_threshold" xd:componentRef="binary_threshold" xd:initiationInterval="x" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="input_image[].data" xd:originalName="input_image" xd:direction="in" xd:interfaceRef="input_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="32"/>
+  <xd:arg xd:name="input_image[].keep" xd:originalName="input_image" xd:direction="in" xd:interfaceRef="input_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="4"/>
+  <xd:arg xd:name="input_image[].strb" xd:originalName="input_image" xd:direction="in" xd:interfaceRef="input_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="4"/>
+  <xd:arg xd:name="input_image[].user" xd:originalName="input_image" xd:direction="in" xd:interfaceRef="input_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="2"/>
+  <xd:arg xd:name="input_image[].last" xd:originalName="input_image" xd:direction="in" xd:interfaceRef="input_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="1"/>
+  <xd:arg xd:name="input_image[].id" xd:originalName="input_image" xd:direction="in" xd:interfaceRef="input_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="5"/>
+  <xd:arg xd:name="input_image[].dest" xd:originalName="input_image" xd:direction="in" xd:interfaceRef="input_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="6"/>
+  <xd:arg xd:name="output_image[].data" xd:originalName="output_image" xd:direction="out" xd:interfaceRef="output_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="32"/>
+  <xd:arg xd:name="output_image[].keep" xd:originalName="output_image" xd:direction="out" xd:interfaceRef="output_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="4"/>
+  <xd:arg xd:name="output_image[].strb" xd:originalName="output_image" xd:direction="out" xd:interfaceRef="output_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="4"/>
+  <xd:arg xd:name="output_image[].user" xd:originalName="output_image" xd:direction="out" xd:interfaceRef="output_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="2"/>
+  <xd:arg xd:name="output_image[].last" xd:originalName="output_image" xd:direction="out" xd:interfaceRef="output_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="1"/>
+  <xd:arg xd:name="output_image[].id" xd:originalName="output_image" xd:direction="out" xd:interfaceRef="output_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="5"/>
+  <xd:arg xd:name="output_image[].dest" xd:originalName="output_image" xd:direction="out" xd:interfaceRef="output_image" xd:busTypeRef="axis" xd:arraySize="2073600" xd:dataWidth="6"/>
+  <xd:arg xd:name="length" xd:originalName="length" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="threshold" xd:originalName="threshold" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="max_val" xd:originalName="max_val" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="443" xd:FF="400" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>
