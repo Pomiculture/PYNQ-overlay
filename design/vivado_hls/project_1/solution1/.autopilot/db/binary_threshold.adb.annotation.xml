@@ -1,0 +1,7 @@
+<annotationInfo>
+<item  id="45" filename="binary_threshold.cpp" linenumber="41" name="icmp_ln895" contextFuncName="binary_threshold" moduleName="binary_threshold" rtlName="icmp_ln895_fu_144_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="18" fileDirectory="/home/semi/Project/vivado_hls"><\/item>
+<item  id="51" filename="binary_threshold.cpp" linenumber="46" name="icmp_ln46" contextFuncName="binary_threshold" moduleName="binary_threshold" rtlName="icmp_ln46_fu_150_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="18" fileDirectory="/home/semi/Project/vivado_hls"><\/item>
+<item  id="52" filename="binary_threshold.cpp" linenumber="46" name="i" contextFuncName="binary_threshold" moduleName="binary_threshold" rtlName="i_fu_155_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/semi/Project/vivado_hls"><\/item>
+<item  id="65" filename="binary_threshold.cpp" linenumber="51" name="icmp_ln895_1" contextFuncName="binary_threshold" moduleName="binary_threshold" rtlName="icmp_ln895_1_fu_189_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="18" fileDirectory="/home/semi/Project/vivado_hls"><\/item>
+<item  id="66" filename="binary_threshold.cpp" linenumber="51" name="select_ln51" contextFuncName="binary_threshold" moduleName="binary_threshold" rtlName="output_image_TDATA_int" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="32" fileDirectory="/home/semi/Project/vivado_hls"><\/item>
+</annotationInfo>
