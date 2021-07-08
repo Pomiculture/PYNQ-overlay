@@ -90,7 +90,7 @@ Furthermore, the results for the three functions are identical. To check that, w
 ---
 <div id='peripherals'/>
 
-## 6)sing PYNQ peripherals
+## 6) Using PYNQ peripherals
 So as to explore the PYNQ field of possibilities, we replaced the part of loading an image from a folder by an input stream coming from the HDMI port. To do so, we connected the HDMI port to a computer opened on a webpage, and followed the [HDMI-in tutorial](https://pynq.readthedocs.io/en/v2.6.1/pynq_libraries/video.html "PYNQ video module"). We also worked with GPIO using the [RGB LED](https://pynq.readthedocs.io/en/v2.4/pynq_package/pynq.lib/pynq.lib.rgbled.html "PYNQ RGB LED module"), whose driver source code can be found [here](https://pynq.readthedocs.io/en/v1.3/_modules/pynq/board/rgbled.html "RGBLED source code").
 
 ---
