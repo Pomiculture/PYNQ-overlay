@@ -45,11 +45,24 @@ Actions :
 <div id='content'/>
 
 ## 3) Content
-...................................................... .
+In the [Jupyter notebook](/src/notebook "Notebook") that corresponds to our application, we first call the OpenCV function for thresholding. Then, we implemented a remake to do the same thing but without calling the library.
 
-expliquer process..................
-3 IP blocks + run automation connection
+Our goal is to configure an overlay that contains a custom IP block that accelerates this function. We call this overlay in the notebook. The Vivado files for the custom IP block can be found [here](https://github.com/Pomiculture/PYNQ-overlay/tree/main/design/vivado_hls "IP block"), and the ones for the whole overlay [here](https://github.com/Pomiculture/PYNQ-overlay/tree/main/design/vivado_rtl "Overlay"). 
+
+We had to follow these steps to turn the Python code into a kernel code :
+- Identify the function to accelerate ('threshold' in our case);
+- Convert the code to a Python function that doesn't call any library;
+- Convert this raw Python function to C++ (check the program [here](src/C%2B%2B%20codes "C++ codes"));
+- Adapt the C++ code to the target board (check the program [here](design/vivado_hls/binary_threshold.cpp "Kernel code"));
+
 The Zynq-7000 device is referenced by the code xc7z020clg400-1.
+
+The following steps describe how to create and use the overlay :
+- Sythesize the custom [IP block](https://www.xilinx.com/products/intellectual-property.html "IP") from the kernel code and export the [RTL (Register-Transfer Language)](https://www.geeksforgeeks.org/register-transfer-language-rtl/ "RTL") as a [Vivado IP](design/vivado_hls "Vivado HLS");
+- Integrate the custom IP block in a [PYNQ-Z2 overlay](design/vivado_rtl "Vivado RTL");
+- Export the block design (check the files [here](src/overlay "Overlay files"));
+- Call the overlay in the notebook;
+- Develop a Python Driver class to easily interact with the overlay.
 
 ---
 <div id='create'/>
@@ -63,6 +76,11 @@ This tutorial video shows how to create the custom IP block. Click on the thumbn
 <div id='integrate'/>
 
 ## 3.2) Integrate the custom IP block to the overlay
+The overlay is composed of three main IP blocks :
+- [ZYNQ Processing system](https://www.xilinx.com/products/intellectual-property/processing_system7.html "ZYNQ processing system");
+- [AXI Direct Memory. Access (AXI DMA)](https://www.xilinx.com/products/intellectual-property/axi_dma.html "AXI DMA");
+- [Our custom IP block](design/vivado_hls "Vivado HLS")
+
 This tutorial video shows how to integrate the custom IP block to the PYNQ-Z2 overlay. Click on the thumbnail to play the video. You may have to download the video.
 
 [<img src="DOCS/Images/play_video.jpg" width="30%">](DOCS/Videos/Vivado_RTL.mp4)
@@ -72,8 +90,6 @@ Here is the final block design :
 
 It contains a hierarchy ('threshold') for our custom IP block :
 ![Hierarchy](DOCS/Images/hierarchy.PNG)
-
-
 
 ---
 <div id='app'/>
