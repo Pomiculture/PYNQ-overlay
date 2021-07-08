@@ -53,7 +53,7 @@ We had to follow these steps to turn the Python code into a kernel code :
 - Identify the function to accelerate ('threshold' in our case);
 - Convert the code to a Python function that doesn't call any library;
 - Convert this raw Python function to C++ (check the program [here](src/C%2B%2B%20codes "C++ codes"));
-- Adapt the C++ code to the target board (check the program [here](design/vivado_hls/binary_threshold.cpp "Kernel code"));
+- [Adapt the C++ code to the target board](https://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/qoa1585574520885.html "Vitis HLS Messaging") (check the program [here](design/vivado_hls/binary_threshold.cpp "Kernel code"));
 
 The Zynq-7000 device is referenced by the code xc7z020clg400-1.
 
@@ -150,7 +150,7 @@ So as to explore the PYNQ field of possibilities, we replaced the part of loadin
 - Make changes in the kernel code of the kernel code of the threshold function to further reduce the execution time;
 - Improve the design of the Python driver class;
 - Implement the IP block of the erode function;
-- Combine the custom IP blocks with the RGB LED and the HDMI in a same overlay. Either start from the whole [PYNQ-Z2 base overlay](https://github.com/Xilinx/PYNQ/tree/master/boards/Pynq-Z2/base "PYNQ-Z2 Base Overlay"), adding the custom IP, or start from zero. This [tutorial](https://discuss.pynq.io/t/tutorial-rebuilding-the-pynq-base-overlay-pynq-v2-6/1993 "Rebuilding the base overlay") may help;
+- Combine the custom IP blocks with the RGB LED and the HDMI in a same overlay to avoid switching between them. Either start from the whole [PYNQ-Z2 base overlay](https://github.com/Xilinx/PYNQ/tree/master/boards/Pynq-Z2/base "PYNQ-Z2 Base Overlay"), adding the custom IP, or start from zero. This [tutorial](https://discuss.pynq.io/t/tutorial-rebuilding-the-pynq-base-overlay-pynq-v2-6/1993 "Rebuilding the base overlay") may help;
 - Configure the HDMI-out peripheral to display the results on an external screen;
 - Apply the function continuously on a video stream.
 
@@ -173,18 +173,3 @@ Donc le résultat est fidèle.
 DMA allows to deal with large arrays = good for images + def dma
 
 Évite d’installer des librairies sur PYNQ sans pour autant consommer bcp, se passer d'import
-
-
-
-
-- PYNQ amelio avoid reload switch between overlay and base overlay when using hdmi source and processing it, original C++ with test, kernel code HLS project, the 3 files for overlay, Vivado project, Pupyter Notebook + pragma https://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/qoa1585574520885.html pipeline + screen vivado overlay = recap avant hls
-
-// Change shape array 2D grayscale ? https://appdividend.com/2020/06/22/how-to-convert-pil-image-to-grayscale-in-python/
-// GitHub : readme context, theme (vivado, pynq, overlay, dma, opencv functions hw accelerate, pragma pipelne, ap_axis), screens (project, results), Video tuto, original C++ with test, kernel code HLS project, the 3 files for overlay, Vivado project, Pupyter Notebook
-// HDMI (to threshold with grayscale) + RGB with the kernel in same overlay PYNQ Z2
-// Compare speed with GColab library code (and Python raw translation)
-// Add PIPELINE pragma for loop https://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/qoa1585574520885.html
-// Try just val
-reliable result
-// TODO compléter avec code C++ de base étoffer version HLS
-
