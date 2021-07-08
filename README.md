@@ -77,8 +77,8 @@ This tutorial video shows how to create the custom IP block. Click on the thumbn
 
 ## 3.2) Integrate the custom IP block to the overlay
 The overlay is composed of three main IP blocks :
-- [ZYNQ Processing system](https://www.xilinx.com/products/intellectual-property/processing_system7.html "ZYNQ processing system");
-- [AXI Direct Memory. Access (AXI DMA)](https://www.xilinx.com/products/intellectual-property/axi_dma.html "AXI DMA");
+- [ZYNQ Processing system](https://www.xilinx.com/products/intellectual-property/processing_system7.html "ZYNQ processing system")
+- [AXI Direct Memory. Access (AXI DMA)](https://www.xilinx.com/products/intellectual-property/axi_dma.html "AXI DMA")
 - [Our custom IP block](design/vivado_hls "Vivado HLS")
 
 This tutorial video shows how to integrate the custom IP block to the PYNQ-Z2 overlay. Click on the thumbnail to play the video. You may have to download the video.
@@ -95,12 +95,13 @@ It contains a hierarchy ('threshold') for our custom IP block :
 <div id='app'/>
 
 ## 4) Running the App
-Once the PYNQ-Z2 card is setup, 
+Once the PYNQ-Z2 card is setup, connect to the Jupyter notebook through the network.
 
-dire lien ip et log/pwd
-overlayfiles + img in outfolder + notebook
+In our case :
+- URL address : 10.104.210.46:9090
+- Login/password : xilinx/xilinx
 
-
+You just have to [download the archive of the notebook project](jupyter_files.zip "Archive") and place it in your own Jupyter space.
 
 ---
 <div id='results'/>
@@ -232,7 +233,7 @@ First, we used the OpenCV funcitons threshold and erode. Then, we reproduced it 
 
 https://pynq.readthedocs.io/en/v2.6.1/overlay_design_methodology/overlay_tutorial.html
 
-access via network Ethernet : 10.104.210.46:9090/
+
 
 - PYNQ amelio avoid reload switch between overlay and base overlay when using hdmi source and processing it, original C++ with test, kernel code HLS project, the 3 files for overlay, Vivado project, Pupyter Notebook + pragma https://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/qoa1585574520885.html pipeline + screen vivado overlay = recap avant hls
 
