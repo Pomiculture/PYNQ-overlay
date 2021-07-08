@@ -73,7 +73,7 @@ The following steps describe how to create and use the overlay :
 ---
 <div id='create'/>
 
-## 3.1) Create the custom IP block
+### 3.1) Create the custom IP block
 This tutorial video shows how to create the custom IP block. Click on the thumbnail to play the video. You may have to download the video.
 
 [<img src="DOCS/Images/play_video.jpg" width="30%">](DOCS/Videos/Vivado_HLS.mp4)
@@ -81,7 +81,7 @@ This tutorial video shows how to create the custom IP block. Click on the thumbn
 ---
 <div id='integrate'/>
 
-## 3.2) Integrate the custom IP block to the overlay
+### 3.2) Integrate the custom IP block to the overlay
 The overlay is composed of three main IP blocks :
 - [ZYNQ Processing system](https://www.xilinx.com/products/intellectual-property/processing_system7.html "ZYNQ processing system")
 - [AXI Direct Memory. Access (AXI DMA)](https://www.xilinx.com/products/intellectual-property/axi_dma.html "AXI DMA")
