@@ -3,9 +3,11 @@ PYNQ overlay to accelerate some Python functions.
 
 <figure class="video_container">
   <video controls="true" allowfullscreen="true" poster="DOCS/Images/block_design.PNG">
-    <source src="DOCS/Videos/Vivado_HLS.mp4" type="video/mp4">
+    <source src="" type="video/mp4">
   </video>
 </figure>
+
+[![Alternate Text]({DOCS/Images/block_design.PNG})]({DOCS/Videos/Vivado_HLS.mp4} "Link Title")
 
 This project aims at accelerating Python functions from the [OpenCV library](https://opencv.org/ "OpenCV") using [PYNQ](http://www.pynq.io/ "PYNQ"). We implemented the [threshold function](https://docs.opencv.org/master/d7/d1b/group__imgproc__misc.html#gae8a4a146d1ca78c626a53577199e9c57 "threshold") with binary mode, which sets the values of the input array to a predefined value if its intensity exceed a certain threshold, otherwise sets it to zero. The [erode function](https://docs.opencv.org/4.5.2/d4/d86/group__imgproc__filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb "erode") is a work in progress.
 
