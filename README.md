@@ -135,7 +135,7 @@ The average durations after this test are the following :
 
 We can deduce that in this test, the overlay function is almost 13 times faster than the remake function. However, it is still around 465 times slower than the original OpenCV implementation. This result was expected given that OpenCV is an optimized library. 
 
-Furthermore, the results for the three functions are identical. To check that, we computed the mean value of the absolute difference between the output arrays, two by two.
+Furthermore, we obtain the same output data for the three functions, which emans that the results are accurate. To check it, we computed the mean value of the absolute difference between the output arrays, two by two.
 
 ---
 <div id='peripherals'/>
@@ -172,58 +172,12 @@ Donc le résultat est fidèle.
 
 DMA allows to deal with large arrays = good for images + def dma
 
-expliquer contenu dossiers
+Évite d’installer des librairies sur PYNQ sans pour autant consommer bcp, se passer d'import
 
-https://www.youtube.com/watch?v=LomArt-hi4M
-
-
-+ parler des fichiers au final juste notebook et placer overlays dans dossier
-
-Évite d’installer des librairies sur PYNQ sans pour autant consommer bcp
-
-photo in/out + hdmi same + temps + results same + ccl
-+ partie results
-
-+ ip block that ocntains the function to accelerate + blabla adaptations
-
-+ partie utilsiation notebook
-
-def hls + def rtl
-
-Login/password : xilinx/xilinx
-10.104.210.36:9090
-
-[![Alternate Text]({image-url})]({video-url} "Link Title")
-
-documentation du custom IP rôle des paramètres et de la fonction avec output array
-
-se passer d'import
-
-https://pynq.readthedocs.io/en/v2.6.1/pynq_overlays/pynqz2/pynqz2_base_overlay.html#user-io
-https://pynq.readthedocs.io/en/v2.6.1/_modules/pynq/lib/rgbled.html
-https://pynq.readthedocs.io/en/v2.6.1/pynq_libraries/video.html
-
-https://discuss.pynq.io/t/tutorial-rebuilding-the-pynq-base-overlay-pynq-v2-3/61
-
-axe amelio avoir hdmi dedans (manque de temps) : todo alléger https://pynq.readthedocs.io/en/v2.6.1/pynq_overlays/partial_reconfiguration.html
-
-place overlays files in folder overlay
-
-photo pynq https://www.mouser.be/new/dfrobot/dfrobot-pynqz2-dev-board/
-
-First, we used the OpenCV funcitons threshold and erode. Then, we reproduced it with raw Python code and obtained the same output data. The next step was to translate it to C++ language, and the final one was to adapt it to HLS (pragmas for bus declaration, loop optimization, no cmath nor malloc directly).
-
-+ specific params of thresh (binary) = erode (kernel size and values ?)
-
-https://pynq.readthedocs.io/en/v2.6.1/overlay_design_methodology/overlay_tutorial.html
 
 
 
 - PYNQ amelio avoid reload switch between overlay and base overlay when using hdmi source and processing it, original C++ with test, kernel code HLS project, the 3 files for overlay, Vivado project, Pupyter Notebook + pragma https://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/qoa1585574520885.html pipeline + screen vivado overlay = recap avant hls
-
-https://github.com/marcomontalbano/video-to-markdown
-
-voir fiches pwpt de erode et trheshold pour expliquer settings !
 
 // Change shape array 2D grayscale ? https://appdividend.com/2020/06/22/how-to-convert-pil-image-to-grayscale-in-python/
 // GitHub : readme context, theme (vivado, pynq, overlay, dma, opencv functions hw accelerate, pragma pipelne, ap_axis), screens (project, results), Video tuto, original C++ with test, kernel code HLS project, the 3 files for overlay, Vivado project, Pupyter Notebook
