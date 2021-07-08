@@ -70,7 +70,7 @@ This tutorial video shows how to integrate the custom IP block to the PYNQ-Z2 ov
 Here is the final block design :
 ![Overlay](DOCS/Images/block_design.PNG)
 
-It contains a hierarchy for our custom IP block :
+It contains a hierarchy ('threshold') for our custom IP block :
 ![Hierarchy](DOCS/Images/hierarchy.PNG)
 
 
