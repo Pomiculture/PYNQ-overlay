@@ -11,6 +11,7 @@ This project aims at accelerating Python functions from the [OpenCV library](htt
 * [5) Results](#results)
 * [6) Using PYNQ peripherals](#peripherals)
 * [7) Axes of improvement](#improvement)
+
 ---
 <div id='context'/>
 
@@ -75,8 +76,10 @@ overlayfiles + img in outfolder + notebook
 For now, only the threshold function of binary type is implemented. 
 
 Input image :
+![Input](DOCS/Images/input.jpeg)
 
 Output image :
+![Output](DOCS/Images/output.jpg)
 
 Let's compare the overlay performances to the original OpenCV function and the Python function remake, using the same input image and parameters. We study the duration across 5 runs.
 
@@ -116,9 +119,6 @@ So as to explore the PYNQ field of possibilities, we replaced the part of loadin
 - Apply the function continuously on a video stream.
 
 ---
-- TODO : caser input image
-- TODO : caser output image
-
 photo pynq branchements et dire que branhcer port hdmi-in
 
 The Xilinx® Zynq® All Programmable device is an SOC based on a dual-core ARM® Cortex®-A9 processor (referred to as the Processing System or PS), integrated with FPGA fabric (referred to as Programmable Logic or PL). The PS subsystem includes a number of dedicated peripherals (memory controllers, USB, Uart, IIC, SPI etc) and can be extended with additional hardware IP in a PL Overlay.
