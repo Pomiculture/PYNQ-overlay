@@ -110,7 +110,7 @@ In our case :
 - URL address : 10.104.210.46:9090
 - Login/password : xilinx/xilinx
 
-You just have to [download the archive of the notebook project](jupyter_files.zip "Archive") and place it in your own Jupyter space.
+You just have to **[download the archive of the notebook project](jupyter_files.zip "Archive")** and place it in your own Jupyter space.
 
 ---
 <div id='results'/>
