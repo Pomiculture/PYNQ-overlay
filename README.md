@@ -1,16 +1,14 @@
 # PYNQ-overlay
 PYNQ overlay to accelerate some Python functions.
 
-[<img src="DOCS/Images/DFRobot_PYNQ-Z2_BL.png" width="50%">](https://www.youtube.com/watch?v=ACMA_-FtZ0Q)
-
-![Alternate Text](DOCS/Images/block_design.PNG)
-
 This project aims at accelerating Python functions from the [OpenCV library](https://opencv.org/ "OpenCV") using [PYNQ](http://www.pynq.io/ "PYNQ"). We implemented the [threshold function](https://docs.opencv.org/master/d7/d1b/group__imgproc__misc.html#gae8a4a146d1ca78c626a53577199e9c57 "threshold") with binary mode, which sets the values of the input array to a predefined value if its intensity exceed a certain threshold, otherwise sets it to zero. The [erode function](https://docs.opencv.org/4.5.2/d4/d86/group__imgproc__filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb "erode") is a work in progress.
 
 ### Table of contents
 * [1) Context](#context)
 * [2) Requirements](#requirements)
 * [3) Content](#content)
+  * [3.1) Create the custom IP block](#create)
+  * [3.2) Integrate the custom IP block to the overlay](#integrate)
 * [4) Running the App](#app)
 * [5) Results](#results)
 * [6) Using PYNQ peripherals](#peripherals)
@@ -53,6 +51,19 @@ expliquer process..................
 3 IP blocks + run automation connection
 The Zynq-7000 device is referenced by the code xc7z020clg400-1.
 
+---
+<div id='create'/>
+
+## 3.1) Create the custom IP block
+This tutorial video shows how to create the custom IP block. Click on the thumbnail to play the video.
+[<img src="DOCS/Images/play_video.jpg" width="30%">](DOCS/Videos/Vivado_HLS.mp4)
+
+---
+<div id='integrate'/>
+
+## 3.2) Integrate the custom IP block to the overlay
+This tutorial video shows how to integrate the custom IP block to the PYNQ-Z2 overlay. Click on the thumbnail to play the video.
+[<img src="DOCS/Images/play_video.jpg" width="30%">](DOCS/Videos/Vivado_RTL.mp4)
 
 Here is the final block design :
 ![Overlay](DOCS/Images/block_design.PNG)
