@@ -76,9 +76,11 @@ overlayfiles + img in outfolder + notebook
 For now, only the threshold function of binary type is implemented. 
 
 - Input image :
+
 ![Input](DOCS/Images/input.jpeg)
 
 - Output image :
+
 ![Output](DOCS/Images/output.jpg)
 
 Let's compare the overlay performances to the original OpenCV function and the Python function remake, using the same input image and parameters. We study the duration across 5 runs.
