@@ -32,7 +32,7 @@ List of requirements for this project :
 - [PYNQ-Z2 board](https://www.tul.com.tw/productspynq-z2.html "PYNQ-Z2")
 - [Vivado Design Suite - HLx Editions - 2019.2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html "Vivado HLx")
 
-![PYNQ-Z2](DOCS/IMAGES/DFRobot_PYNQ-Z2_BL.png)
+![PYNQ-Z2](DOCS/Images/DFRobot_PYNQ-Z2_BL.png)
 
 Actions :
 - Setup the PYNQ-Z2 board by following this [guide](https://pynq.readthedocs.io/en/v2.6.1/getting_started/pynq_z2_setup.html "Setup card"). The boot files are located [here](http://www.pynq.io/board.html "Flash card").
@@ -49,10 +49,13 @@ expliquer process..................
 The Zynq-7000 device is referenced by the code xc7z020clg400-1.
 
 
+Here is the final block design :
+![Overlay](DOCS/Images/block_design.PNG)
+
+It contains a hierarchy for our custom IP block :
+![Hierarchy](DOCS/Images/hierarchy.PNG)
 
 
-- TODO : photo Vivado project architecture (block design)
-- TODO : photo hierarchy
 
 ---
 <div id='app'/>
@@ -148,6 +151,8 @@ SAVE PROJECT WHOLE and put on github
 parler des 3 fichiers d'intérêt décrivant overlay
 
 expliquer contenu dossiers
+
+dire goal réel
 
 https://www.youtube.com/watch?v=LomArt-hi4M
 https://pynq.readthedocs.io/en/v2.6.1/overlay_design_methodology/overlay_tutorial.html
