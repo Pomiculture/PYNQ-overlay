@@ -24,7 +24,7 @@ It contains a Programmable logic equivalent to Artix-7 [FPGA (Field-Programmable
 
 As defined in the [PYNQ documentation](https://pynq.readthedocs.io/en/v2.6.1/pynq_overlays.html "PYNQ overlays"), "overlays, or hardware libraries, are programmable FPGA designs that extend the user application from the Processing System of the Zynq into the Programmable Logic. They can be used to accelerate a software application [...]. An FPGA overlay is a virtual reconfigurable architecture that overlays on top of the physical FPGA configurable fabric".
 
-This [tutorial](https://www.youtube.com/watch?v=Dupyek4NUoI "How to make a custom PYNQ overlay") explains how to develop your own overlay with [Vivado](https://www.xilinx.com/support/university/vivado.html "Vivado") and PYNQ.
+This [tutorial](https://www.youtube.com/watch?v=Dupyek4NUoI "How to make a custom PYNQ overlay") explains how to develop your own overlay with [Vivado](https://www.xilinx.com/support/university/vivado.html "Vivado") and PYNQ. This [documentation page](https://pynq.readthedocs.io/en/v2.6.1/overlay_design_methodology/overlay_tutorial.html "PYNQ overlay tutorial") may help.
 
 ---
 <div id='requirements'/>
@@ -95,7 +95,7 @@ It contains a hierarchy ('threshold') for our custom IP block :
 <div id='app'/>
 
 ## 4) Running the App
-Once the PYNQ-Z2 card is setup, connect to the Jupyter notebook through the network.
+Once the PYNQ-Z2 card is setup, connect to the Jupyter notebook through the network. Connect the PYNQ-Z2 to Ethernet, and connect the HDMI-in port to a machine through an HDMI cable.
 
 In our case :
 - URL address : 10.104.210.46:9090
@@ -164,34 +164,18 @@ expliquer threshold preprocess et postprocess
 partie process avec les vidéos et explications framework = expliquer process + expliquer etaps dev
 partie axes amelios : continuer optimiser code + traiter erode
 
-open notebook in yourpynq and put overlays in folder ...
-
-blabla processing system Xilinxmachin
-
 expliquer rôle threshold - Thresh figé params
 goal : maipulate matrices and use dma for large arrays et dev custom ip block intergrate in own overlay and use it with a Driver on notebook
 
-link videos
-
-Requirements finir :
-Xilinx Zynq®-7000 All Programmable SoC (AP SoC) family
-slide 78 pwpt
-
-recap des étapes de dev
+Intérêt était avant tout de développer mon propre bloc pour l’intégrer dans un overlay, manipuler des matrices de grande taille en utilisant le module DMA (accès direct à la mémoire), et développer un driver pour exécuter la fonction.
+Donc le résultat est fidèle.
 
 DMA allows to deal with large arrays = good for images + def dma
 
-compare speed with the 3
-SAVE PROJECT WHOLE and put on github
-
-parler des 3 fichiers d'intérêt décrivant overlay
-
 expliquer contenu dossiers
 
-dire goal réel
-
 https://www.youtube.com/watch?v=LomArt-hi4M
-https://pynq.readthedocs.io/en/v2.6.1/overlay_design_methodology/overlay_tutorial.html
+
 
 + parler des fichiers au final juste notebook et placer overlays dans dossier
 
