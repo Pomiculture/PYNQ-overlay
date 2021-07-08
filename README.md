@@ -2,8 +2,8 @@
 PYNQ overlay to accelerate some Python functions.
 
 <figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="path/to/poster_image.png">
-    <source src="DOCS/Video/Vivado_HLS.mp4" type="video/mp4">
+  <video controls="true" allowfullscreen="true" poster="DOCS/Images/block_design.PNG">
+    <source src="DOCS/Videos/Vivado_HLS.mp4" type="video/mp4">
   </video>
 </figure>
 
