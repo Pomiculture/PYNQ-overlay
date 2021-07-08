@@ -32,6 +32,8 @@ List of requirements for this project :
 - [PYNQ-Z2 board](https://www.tul.com.tw/productspynq-z2.html "PYNQ-Z2")
 - [Vivado Design Suite - HLx Editions - 2019.2](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html "Vivado HLx")
 
+![PYNQ-Z2](DOCS/IMAGES/DFRobot_PYNQ-Z2_BL.png)
+
 Actions :
 - Setup the PYNQ-Z2 board by following this [guide](https://pynq.readthedocs.io/en/v2.6.1/getting_started/pynq_z2_setup.html "Setup card"). The boot files are located [here](http://www.pynq.io/board.html "Flash card").
 - Install on Vivado the [Vivado board files for PYNQ-Z2](https://pynq.readthedocs.io/en/v2.3/overlay_design_methodology/board_settings.html#vivado-board-files "Board files"). In case the link is broken, try [this one](https://www.tul.com.tw/productspynq-z2.html "PYNQ-Z2 TUL"). You may need to use [Win32 Disk Imager](https://win32diskimager.download/ "Win321Disk Imager"), [Putty](https://www.putty.org/ "Putty") and a micro SD to SD adapter.
@@ -45,6 +47,12 @@ Actions :
 expliquer process..................
 3 IP blocks + run automation connection
 The Zynq-7000 device is referenced by the code xc7z020clg400-1.
+
+
+
+
+- TODO : photo Vivado project architecture (block design)
+- TODO : photo hierarchy
 
 ---
 <div id='app'/>
@@ -105,21 +113,8 @@ So as to explore the PYNQ field of possibilities, we replaced the part of loadin
 - Apply the function continuously on a video stream.
 
 ---
-- TODO : photo pynq board https://www.mouser.be/new/dfrobot/dfrobot-pynqz2-dev-board/
-- TODO : photo Vivado project architecture (block design)
-- TODO : photo hierarchy
 - TODO : caser input image
 - TODO : caser output image
-- TODO : mettre version la plus récente notebook
-
-
-
-
-
-
-
-
-
 
 photo pynq branchements et dire que branhcer port hdmi-in
 
