@@ -3,6 +3,12 @@ PYNQ overlay to accelerate some Python functions.
 
 This project aims at accelerating Python functions from the [OpenCV library](https://opencv.org/ "OpenCV") using [PYNQ](http://www.pynq.io/ "PYNQ"). We implemented the [threshold function](https://docs.opencv.org/master/d7/d1b/group__imgproc__misc.html#gae8a4a146d1ca78c626a53577199e9c57 "threshold") with binary mode, which sets the values of the input array to a predefined value if its intensity exceed a certain threshold, otherwise sets it to zero. The [erode function](https://docs.opencv.org/4.5.2/d4/d86/group__imgproc__filter.html#gaeb1e0c1033e3f6b891a25d0511362aeb "erode") is a work in progress.
 
+The main goal of this project are :
+- Develop a custom IP block to compute a function;
+- Manipulate large arrays using the DMA;
+- Integrate the IP block into an overlay for a specific target platform;
+- Develop a driver to run the accelerated function;
+
 ### Table of contents
 * [1) Context](#context)
 * [2) Requirements](#requirements)
@@ -91,6 +97,9 @@ Here is the final block design :
 It contains a hierarchy ('threshold') for our custom IP block :
 ![Hierarchy](DOCS/Images/hierarchy.PNG)
 
+Before calling the threshold function, we need to preprocess the image to convert it to grayscale, and then to an array, and finally flatten it and get its length.
+The postprocessing part reshapes the output data and converts it to an image.
+
 ---
 <div id='app'/>
 
@@ -147,29 +156,10 @@ So as to explore the PYNQ field of possibilities, we replaced the part of loadin
 <div id='improvement'/>
 
 ## 7) Axes of improvement
-- Make changes in the kernel code of the kernel code of the threshold function to further reduce the execution time;
+- Make changes to the kernel code of the kernel code of the threshold function to further reduce the execution time;
 - Improve the design of the Python driver class;
+- Make the threshold function more customizable by allowing the choice of the [thresholding technique](https://docs.opencv.org/4.5.2/d7/d1b/group__imgproc__misc.html#gaa9e58d2860d4afa658ef70a9b1115576 "Threshold types"); 
 - Implement the IP block of the erode function;
 - Combine the custom IP blocks with the RGB LED and the HDMI in a same overlay to avoid switching between them. Either start from the whole [PYNQ-Z2 base overlay](https://github.com/Xilinx/PYNQ/tree/master/boards/Pynq-Z2/base "PYNQ-Z2 Base Overlay"), adding the custom IP, or start from zero. This [tutorial](https://discuss.pynq.io/t/tutorial-rebuilding-the-pynq-base-overlay-pynq-v2-6/1993 "Rebuilding the base overlay") may help;
 - Configure the HDMI-out peripheral to display the results on an external screen;
 - Apply the function continuously on a video stream.
-
----
-photo pynq branchements et dire que branhcer port hdmi-in
-
-The Xilinx® Zynq® All Programmable device is an SOC based on a dual-core ARM® Cortex®-A9 processor (referred to as the Processing System or PS), integrated with FPGA fabric (referred to as Programmable Logic or PL). The PS subsystem includes a number of dedicated peripherals (memory controllers, USB, Uart, IIC, SPI etc) and can be extended with additional hardware IP in a PL Overlay.
-
-expliquer threshold preprocess et postprocess
-
-partie process avec les vidéos et explications framework = expliquer process + expliquer etaps dev
-partie axes amelios : continuer optimiser code + traiter erode
-
-expliquer rôle threshold - Thresh figé params
-goal : maipulate matrices and use dma for large arrays et dev custom ip block intergrate in own overlay and use it with a Driver on notebook
-
-Intérêt était avant tout de développer mon propre bloc pour l’intégrer dans un overlay, manipuler des matrices de grande taille en utilisant le module DMA (accès direct à la mémoire), et développer un driver pour exécuter la fonction.
-Donc le résultat est fidèle.
-
-DMA allows to deal with large arrays = good for images + def dma
-
-Évite d’installer des librairies sur PYNQ sans pour autant consommer bcp, se passer d'import
