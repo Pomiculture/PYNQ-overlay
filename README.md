@@ -70,7 +70,6 @@ The following steps describe how to create and use the overlay :
 - Call the overlay in the notebook;
 - Develop a Python Driver class to easily interact with the overlay.
 
----
 <div id='create'/>
 
 ### 3.1) Create the custom IP block
@@ -78,7 +77,6 @@ This tutorial video shows how to create the custom IP block. Click on the thumbn
 
 [<img src="DOCS/Images/play_video.jpg" width="30%">](DOCS/Videos/Vivado_HLS.mp4)
 
----
 <div id='integrate'/>
 
 ### 3.2) Integrate the custom IP block to the overlay
